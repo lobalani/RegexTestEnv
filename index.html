@@ -11,7 +11,39 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <h1>Welcome!</h1>
+        <div class="container-fluid">
+        	<div class="row">
+        		<div class="col-sm-12">
+        			<div class="alert alert-danger hide" id="alert-box"></div>
+
+        			<!-- Text input field starts here -->
+    				<div class="form-group">
+    					<label for="input-text">Text</label>
+    					<input type="text" class="form-control" id="input-text" placeholder="Text">
+    				</div>
+    				<!-- Text input field ends here -->
+
+					<!-- Regex input field starts here -->
+    				<label for="inputRegex">Regex</label>
+    				<div class="input-group">
+    					<input type="text" class="form-control" id="input-regex" placeholder="Regex">
+    					<span class="input-group-btn">
+    						<button type="button" class="btn btn-default">Test</button>
+    					</span>
+    				</div>
+    				<!-- Regex input field ends here -->
+        		</div>
+        	</div>
+
+        	<!-- Output Log Area Starts Here -->
+			<div class="row">
+				<h3>Results</h3>
+				<div class="col-sm-12">
+					<div class="well well-lg" id="results-box"></div>
+				</div>
+			</div>
+        	<!-- Output Log Area Ends Here -->
+        </div>
 
 		<!-- JS Scripts -->
         <script src="js/jquery.js"></script>
