@@ -34,7 +34,7 @@ jQuery(document).ready(function() {
 
    			//generate output to display
    			var output = displayMatchesFoundCount(results);
-   			output += displayResults(results);
+   			output += displayResults(results, text);
 
    			resultsbox.html(output);
    		}
