@@ -77,9 +77,9 @@ jQuery(document).ready(function() {
    				var flags = pattern.pop();
    				pattern =  pattern.join("/");
 
-   				pattern = new Regex(pattern, flags);
+   				pattern = new RegExp(pattern, flags);
    			} else {
-   				pattern = new Regex(pattern, "g");
+   				pattern = new RegExp(pattern, "g");
    			}
 
    			return pattern;
