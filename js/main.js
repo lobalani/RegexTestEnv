@@ -9,12 +9,12 @@ jQuery(document).ready(function() {
    	var resultsbox = jQuery("#results-box");
    	var testButton = jQuery("#test-button");
 
-   	//get the string values
-   	var text = textbox.val();
-   	var pattern = regexbox.val();
-
    	testButton.on('click', function(event) {
    		event.preventDefault();
+
+   		//get the string values
+   		var text = textbox.val();
+   		var pattern = regexbox.val();
    		
    		// clear page from the previous run
    		clearResultsandErrors();
@@ -26,6 +26,17 @@ jQuery(document).ready(function() {
    			errorLog("Enter a Regex to test the Text.");
    		} else {
    			pattern = createRegex(pattern);
+
+   			if (!pattern) return;
+
+   			//generate matches
+   			var results = generateMatches(pattern, text);
+
+   			//generate output to display
+   			var output = displayMatchesFoundCount(results);
+   			output += displayResults(results);
+
+   			resultsbox.html(output);
    		}
    	});
 
